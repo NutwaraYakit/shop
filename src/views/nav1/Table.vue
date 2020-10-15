@@ -96,7 +96,7 @@
 <script>
 	import util from '../../common/js/util'
 	//import NProgress from 'nprogress'
-	import { getUserListPage, removeUser, batchRemoveUser, editUser, addUser } from '../../api/api';
+	// import { getUserListPage, removeUser, batchRemoveUser, editUser, addUser } from '../../api/api';
 
 	export default {
 		data() {
@@ -107,7 +107,7 @@
 				users: [],
 				total: 0,
 				page: 1,
-				listLoading: false,
+				// listLoading: false,
 				sels: [],
 
 				editFormVisible: false,
@@ -127,7 +127,7 @@
 				},
 
 				addFormVisible: false,
-				addLoading: false,
+				// addLoading: false,
 				addFormRules: {
 					name: [
 						{ required: true, message: 'Please type in your name', trigger: 'blur' }
@@ -150,19 +150,19 @@
 			},
 			handleCurrentChange(val) {
 				this.page = val;
-				this.getUsers();
+				// this.getUsers();
 			},
 			getUsers() {
 				let para = {
 					page: this.page,
 					name: this.filters.name
 				};
-				this.listLoading = true;
+				// this.listLoading = true;
 				//NProgress.start();
 				getUserListPage(para).then((res) => {
 					this.total = res.data.total;
 					this.users = res.data.users;
-					this.listLoading = false;
+					// this.listLoading = false;
 					//NProgress.done();
 				});
 			},
@@ -170,11 +170,11 @@
 				this.$confirm('Are you sure to delete this record?', 'Delete', {
 					type: 'warning'
 				}).then(() => {
-					this.listLoading = true;
+					// this.listLoading = true;
 					//NProgress.start();
 					let para = { id: row.id };
 					removeUser(para).then((res) => {
-						this.listLoading = false;
+						// this.listLoading = false;
 						//NProgress.done();
 						this.$message({
 							message: 'successfully deleted',
