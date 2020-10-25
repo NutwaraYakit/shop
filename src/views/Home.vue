@@ -19,7 +19,7 @@
             ><img :src="this.sysUserAvatar" /> {{ sysUserName }}</span
           >
           <el-dropdown-menu slot="dropdown">
-            <el-dropdown-item>My message</el-dropdown-item>
+            <el-dropdown-item>message</el-dropdown-item>
             <el-dropdown-item>Set up</el-dropdown-item>
             <el-dropdown-item divided @click.native="logout"
               >sign out</el-dropdown-item
