@@ -33,7 +33,7 @@ let routes = [
             { path: '/main', component: Main, name: 'Home page', hidden: true },
             { path: '/table', component: Table, name: 'Table' },
             { path: '/form', component: Form, name: 'Form' },
-            { path: '/user', component: user, name: 'List' },
+            { path: '/user', component: user, name: 'Product List' },
         ]
     },
     {
@@ -42,8 +42,8 @@ let routes = [
         name: 'Navigation Two',
         iconCls: 'fa fa-id-card-o',
         children: [
-            { path: '/page4', component: Page4, name: 'Page 4' },
-            { path: '/page5', component: Page5, name: 'Page 5' }
+            { path: '/page4', component: Page4, name: 'Personal' },
+            { path: '/page5', component: Page5, name: 'Employee List' }
         ]
     },
     {
@@ -53,7 +53,7 @@ let routes = [
         iconCls: 'fa fa-address-card',
         leaf: true,//Only one node
         children: [
-            { path: '/page6', component: Page6, name: 'avigation Three' }
+            { path: '/page6', component: Page6, name: 'Avigation Three' }
         ]
     },
     {
@@ -62,7 +62,7 @@ let routes = [
         name: 'Charts',
         iconCls: 'fa fa-bar-chart',
         children: [
-            { path: '/echarts', component: echarts, name: 'echarts' }
+            { path: '/echarts', component: echarts, name: 'Echarts' }
         ]
     },
     {
